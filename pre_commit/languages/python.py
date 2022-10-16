@@ -49,7 +49,7 @@ def _read_pyvenv_cfg(filename: str) -> dict[str, str]:
 
 def bin_dir(venv: str) -> str:
     """On windows there's a different directory for the virtualenv"""
-    bin_part = 'Scripts' if os.name == 'nt' else 'bin'
+    bin_part = 'Scripts' if os.name == 'nt' else 'local/bin'
     return os.path.join(venv, bin_part)
 
 
